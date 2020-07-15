@@ -35,9 +35,9 @@ def ssh(host, port, username, password):
 
 def main():
     app_data = ssh(host='192.168.1.15', port=22, username='root', password='alpine')
-    app_dump = "Application Data Details\n" \
-               "________________________\n" \
-               "\nFolder Locations: /private/var/mobile/Containers/Data/Application/\n" \
+    app_dump = "Folder ID vs Bundle ID\n" \
+               "______________________\n" \
+               "\nData Folder Location: /private/var/mobile/Containers/Data/Application/\n" \
                "\nFolder Name, Application Bundle ID\n"
     for data in app_data:
         app_dump += '{0}, {1}\n'.format(data[0], data[1])
